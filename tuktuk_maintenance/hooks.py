@@ -6,7 +6,7 @@ app_email = "yuda@graphicshop.co.ke"
 app_license = "MIT"
 app_version = "0.1.0"
 
-# App styling
+# App styling - FIXED: Proper CSS path and loading order
 app_include_css = [
     "/assets/tuktuk_maintenance/css/maintenance_workspace.css"
 ]
@@ -14,6 +14,12 @@ app_include_css = [
 app_include_js = [
     "/assets/tuktuk_maintenance/js/maintenance.js"
 ]
+
+# Website includes for proper loading
+website_context = {
+    "favicon": "/assets/tuktuk_maintenance/images/favicon.ico",
+    "splash_image": "/assets/tuktuk_maintenance/images/splash.png"
+}
 
 app_icon = "fa fa-wrench"
 app_color = "orange"
@@ -126,6 +132,9 @@ custom_fields = {
         }
     ]
 }
+
+# Boot session - ensures CSS loads properly
+boot_session = "tuktuk_maintenance.boot.boot_session"
 
 # Fixtures for workspace and charts
 fixtures = [

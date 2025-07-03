@@ -1,10 +1,21 @@
-/* ======== COMPLETE TUKTUK MAINTENANCE WORKSPACE STYLING ======== */
-/* Complete CSS file with all icons and styling for TukTuk Maintenance workspace */
+/* ======== TUKTUK MAINTENANCE WORKSPACE STYLING (OVERRIDE) ======== */
+/* Higher specificity CSS to override base tuktuk_management styles */
 
-/* ===== NUMBER CARDS STYLING ===== */
+/* ===== FORCE MAINTENANCE WORKSPACE TARGETING ===== */
 
-/* Target the number card widgets for maintenance */
-.workspace-body[data-workspace="TukTuk Maintenance"] .widget.number-widget-box {
+/* Target ONLY the TukTuk Maintenance workspace specifically */
+body[data-route="Workspaces/TukTuk Maintenance"] .workspace-body,
+.workspace-body[data-workspace="TukTuk Maintenance"],
+[data-workspace-name="TukTuk Maintenance"] .workspace-body {
+    /* Maintenance workspace specific styling */
+}
+
+/* ===== NUMBER CARDS STYLING (HIGH SPECIFICITY) ===== */
+
+/* Override base number card styling with maintenance-specific */
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.number-widget-box,
+.workspace-body[data-workspace="TukTuk Maintenance"] .widget.number-widget-box,
+[data-workspace-name="TukTuk Maintenance"] .widget.number-widget-box {
     background: white !important;
     border: 1px solid #e5e5e5 !important;
     border-radius: 12px !important;
@@ -16,63 +27,12 @@
     min-height: 140px !important;
 }
 
-/* Hover effects for maintenance number cards */
-.workspace-body[data-workspace="TukTuk Maintenance"] .widget.number-widget-box:hover {
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important;
-    transform: translateY(-3px) !important;
-    border-color: #ddd !important;
-}
+/* ===== SHORTCUT BUTTONS BASE STYLING (OVERRIDE TUKTUK MANAGEMENT) ===== */
 
-/* Style the main number display in maintenance cards */
-.workspace-body[data-workspace="TukTuk Maintenance"] .widget.number-widget-box .widget-content {
-    font-size: 76px !important;
-    font-weight: 700 !important;
-    line-height: 1 !important;
-    color: #2c3e50 !important;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-    margin-bottom: 8px !important;
-}
-
-/* Style the card title/label for maintenance */
-.workspace-body[data-workspace="TukTuk Maintenance"] .widget.number-widget-box .widget-head .widget-title {
-    font-size: 12px !important;
-    color: #666 !important;
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
-    margin: 0 !important;
-}
-
-/* ===== NUMBER CARDS COLOR CODING ===== */
-
-/* Total Maintenance Records - Orange */
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(2) .widget.number-widget-box {
-    border-left: 5px solid #e67e22 !important;
-    background: linear-gradient(135deg, rgba(230, 126, 34, 0.05) 0%, rgba(255,255,255,1) 100%) !important;
-}
-
-/* Active Maintenance - Amber */
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(3) .widget.number-widget-box {
-    border-left: 5px solid #f39c12 !important;
-    background: linear-gradient(135deg, rgba(243, 156, 18, 0.05) 0%, rgba(255,255,255,1) 100%) !important;
-}
-
-/* Critical Alerts - Red */
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(4) .widget.number-widget-box {
-    border-left: 5px solid #e74c3c !important;
-    background: linear-gradient(135deg, rgba(231, 76, 60, 0.05) 0%, rgba(255,255,255,1) 100%) !important;
-}
-
-/* Low Battery Health - Purple */
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(5) .widget.number-widget-box {
-    border-left: 5px solid #9b59b6 !important;
-    background: linear-gradient(135deg, rgba(155, 89, 182, 0.05) 0%, rgba(255,255,255,1) 100%) !important;
-}
-
-/* ===== SHORTCUT BUTTONS BASE STYLING ===== */
-
-/* Style the maintenance shortcut buttons */
-.workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box {
+/* Target maintenance shortcut buttons with highest specificity */
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box,
+.workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box,
+[data-workspace-name="TukTuk Maintenance"] .widget.shortcut-widget-box {
     background: #f8f9fa !important;
     color: black !important;
     border: 1px solid #e5e5e5 !important;
@@ -90,100 +50,127 @@
     justify-content: center !important;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
     transform: translateY(-1px) !important;
+    position: relative !important;
 }
 
-.workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box:hover {
-    transform: translateY(-3px) !important;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
-    background: #f0f1f3 !important;
-}
+/* ===== MAINTENANCE SPECIFIC SHORTCUT ICONS (FORCE OVERRIDE) ===== */
 
-/* ===== SHORTCUT BUTTON ICONS ===== */
-
-/* Base icon styling for all shortcuts */
-.workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box::before {
-    content: '';
+/* Target ALL maintenance shortcut buttons first */
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box::before,
+.workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box::before,
+[data-workspace-name="TukTuk Maintenance"] .widget.shortcut-widget-box::before {
+    content: '' !important;
     font-size: 28px !important;
     margin-bottom: 8px !important;
     display: block !important;
     line-height: 1 !important;
+    position: relative !important;
+    z-index: 10 !important;
 }
 
-/* MAINTENANCE RECORDS - 🔧 Wrench Icon */
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(7) .widget.shortcut-widget-box {
+/* MAINTENANCE RECORDS - 🔧 Wrench Icon (Override any existing icons) */
+body[data-route="Workspaces/TukTuk Maintenance"] .ce-block:nth-child(7) .widget.shortcut-widget-box,
+.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(7) .widget.shortcut-widget-box,
+[data-workspace-name="TukTuk Maintenance"] .ce-block:nth-child(7) .widget.shortcut-widget-box {
     background: linear-gradient(135deg, rgba(230, 126, 34, 0.1) 0%, rgba(211, 84, 0, 0.05) 100%) !important;
     border-left: 4px solid #e67e22 !important;
     color: #e67e22 !important;
     box-shadow: 0 4px 12px rgba(230, 126, 34, 0.2) !important;
 }
 
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(7) .widget.shortcut-widget-box::before {
+body[data-route="Workspaces/TukTuk Maintenance"] .ce-block:nth-child(7) .widget.shortcut-widget-box::before,
+.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(7) .widget.shortcut-widget-box::before,
+[data-workspace-name="TukTuk Maintenance"] .ce-block:nth-child(7) .widget.shortcut-widget-box::before {
     content: '🔧' !important; /* Wrench icon for Maintenance Records */
     font-size: 28px !important;
+    display: block !important;
+    margin-bottom: 8px !important;
 }
 
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(7) .widget.shortcut-widget-box:hover {
-    background: linear-gradient(135deg, rgba(230, 126, 34, 0.15) 0%, rgba(211, 84, 0, 0.1) 100%) !important;
-    box-shadow: 0 8px 20px rgba(230, 126, 34, 0.3) !important;
-}
-
-/* BATTERY HEALTH - 🔋 Battery Icon */
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(8) .widget.shortcut-widget-box {
+/* BATTERY HEALTH - 🔋 Battery Icon (Override any existing icons) */
+body[data-route="Workspaces/TukTuk Maintenance"] .ce-block:nth-child(8) .widget.shortcut-widget-box,
+.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(8) .widget.shortcut-widget-box,
+[data-workspace-name="TukTuk Maintenance"] .ce-block:nth-child(8) .widget.shortcut-widget-box {
     background: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(39, 174, 96, 0.05) 100%) !important;
     border-left: 4px solid #2ecc71 !important;
     color: #2ecc71 !important;
     box-shadow: 0 4px 12px rgba(46, 204, 113, 0.2) !important;
 }
 
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(8) .widget.shortcut-widget-box::before {
+body[data-route="Workspaces/TukTuk Maintenance"] .ce-block:nth-child(8) .widget.shortcut-widget-box::before,
+.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(8) .widget.shortcut-widget-box::before,
+[data-workspace-name="TukTuk Maintenance"] .ce-block:nth-child(8) .widget.shortcut-widget-box::before {
     content: '🔋' !important; /* Battery icon for Battery Health */
     font-size: 28px !important;
+    display: block !important;
+    margin-bottom: 8px !important;
 }
 
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(8) .widget.shortcut-widget-box:hover {
-    background: linear-gradient(135deg, rgba(46, 204, 113, 0.15) 0%, rgba(39, 174, 96, 0.1) 100%) !important;
-    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.3) !important;
-}
-
-/* PARTS INVENTORY - 📦 Package Icon */
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(9) .widget.shortcut-widget-box {
+/* PARTS INVENTORY - 📦 Package Icon (FORCE DISPLAY) */
+body[data-route="Workspaces/TukTuk Maintenance"] .ce-block:nth-child(9) .widget.shortcut-widget-box,
+.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(9) .widget.shortcut-widget-box,
+[data-workspace-name="TukTuk Maintenance"] .ce-block:nth-child(9) .widget.shortcut-widget-box {
     background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(41, 128, 185, 0.05) 100%) !important;
     border-left: 4px solid #3498db !important;
     color: #3498db !important;
     box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2) !important;
 }
 
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(9) .widget.shortcut-widget-box::before {
+body[data-route="Workspaces/TukTuk Maintenance"] .ce-block:nth-child(9) .widget.shortcut-widget-box::before,
+.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(9) .widget.shortcut-widget-box::before,
+[data-workspace-name="TukTuk Maintenance"] .ce-block:nth-child(9) .widget.shortcut-widget-box::before {
     content: '📦' !important; /* Package icon for Parts Inventory */
     font-size: 28px !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
 }
 
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(9) .widget.shortcut-widget-box:hover {
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.15) 0%, rgba(41, 128, 185, 0.1) 100%) !important;
-    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3) !important;
-}
-
-/* MAINTENANCE ALERTS - ⚠️ Warning Icon */
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(10) .widget.shortcut-widget-box {
+/* MAINTENANCE ALERTS - ⚠️ Warning Icon (FORCE DISPLAY) */
+body[data-route="Workspaces/TukTuk Maintenance"] .ce-block:nth-child(10) .widget.shortcut-widget-box,
+.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(10) .widget.shortcut-widget-box,
+[data-workspace-name="TukTuk Maintenance"] .ce-block:nth-child(10) .widget.shortcut-widget-box {
     background: linear-gradient(135deg, rgba(231, 76, 60, 0.1) 0%, rgba(192, 57, 43, 0.05) 100%) !important;
     border-left: 4px solid #e74c3c !important;
     color: #e74c3c !important;
     box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2) !important;
 }
 
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(10) .widget.shortcut-widget-box::before {
+body[data-route="Workspaces/TukTuk Maintenance"] .ce-block:nth-child(10) .widget.shortcut-widget-box::before,
+.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(10) .widget.shortcut-widget-box::before,
+[data-workspace-name="TukTuk Maintenance"] .ce-block:nth-child(10) .widget.shortcut-widget-box::before {
     content: '⚠️' !important; /* Warning icon for Maintenance Alerts */
     font-size: 28px !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
 }
 
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(10) .widget.shortcut-widget-box:hover {
-    background: linear-gradient(135deg, rgba(231, 76, 60, 0.15) 0%, rgba(192, 57, 43, 0.1) 100%) !important;
-    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3) !important;
+/* ===== HIDE ANY EXISTING ICONS FROM BASE SYSTEM ===== */
+
+/* Override any existing icon classes or background images */
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box .widget-icon,
+.workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box .widget-icon,
+[data-workspace-name="TukTuk Maintenance"] .widget.shortcut-widget-box .widget-icon {
+    display: none !important;
+    background: none !important;
 }
 
-/* ===== SHORTCUT BUTTON TEXT STYLING ===== */
+/* Hide any FontAwesome or other icon classes */
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box i,
+.workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box i,
+[data-workspace-name="TukTuk Maintenance"] .widget.shortcut-widget-box i {
+    display: none !important;
+}
 
-/* Style shortcut labels for maintenance */
+/* ===== TEXT STYLING FOR MAINTENANCE SHORTCUTS ===== */
+
+/* Force black text on maintenance shortcut buttons */
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box .widget-head .widget-title,
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box .widget-label,
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box .widget-head h5,
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box .widget-title,
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box span,
 .workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box .widget-head .widget-title,
 .workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box .widget-label,
 .workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box .widget-head h5,
@@ -197,161 +184,71 @@
     text-shadow: none !important;
 }
 
-/* Force black text on all maintenance shortcut children */
-.workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box * {
-    color: black !important;
+/* ===== HOVER EFFECTS ===== */
+
+/* Hover effects for maintenance shortcuts */
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box:hover,
+.workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box:hover,
+[data-workspace-name="TukTuk Maintenance"] .widget.shortcut-widget-box:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+    background: #f0f1f3 !important;
 }
 
-/* Hide shortcut counts for button-style shortcuts in maintenance */
-.workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box .widget-control {
-    display: none !important;
+/* ===== FORCE EMOJI FONT FAMILY ===== */
+
+/* Ensure emojis render properly across browsers */
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box::before,
+.workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box::before,
+[data-workspace-name="TukTuk Maintenance"] .widget.shortcut-widget-box::before {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Emoji", sans-serif !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    -webkit-font-smoothing: antialiased !important;
 }
 
-/* ===== QUICK LISTS STYLING ===== */
+/* ===== DEBUGGING HELPERS (TEMPORARY) ===== */
 
-/* Quick list styling for maintenance workspace */
-.workspace-body[data-workspace="TukTuk Maintenance"] .widget.quick-list-widget {
-    background: white !important;
-    border: 1px solid #e5e5e5 !important;
-    border-radius: 8px !important;
-    margin: 10px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
-}
-
-.workspace-body[data-workspace="TukTuk Maintenance"] .widget.quick-list-widget .widget-head {
-    background: #f8f9fa !important;
-    border-bottom: 1px solid #e5e5e5 !important;
-    padding: 12px 16px !important;
-    font-weight: 600 !important;
-    color: #2c3e50 !important;
-    border-radius: 8px 8px 0 0 !important;
-}
-
-/* ===== LAYOUT AND SPACING ===== */
-
-/* Add some spacing between sections in maintenance workspace */
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block {
-    margin-bottom: 20px !important;
-}
-
-/* Ensure proper layout in the maintenance workspace */
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block.col-xs-12.col-sm-6.col-md-4,
-.workspace-body[data-workspace="TukTuk Maintenance"] .ce-block.col-xs-12.col-sm-6.col-md-3 {
-    padding: 5px !important;
+/* Add visible borders to help debug targeting - remove after testing */
+body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box {
+    /* border: 2px solid red !important; /* REMOVE AFTER DEBUGGING */
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.number-widget-box {
-        min-height: 120px !important;
-        padding: 16px !important;
-    }
-    
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.number-widget-box .widget-content {
-        font-size: 48px !important;
-    }
-    
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box {
-        min-height: 70px !important;
-        padding: 15px !important;
-    }
-    
+    body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box::before,
     .workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box::before {
         font-size: 24px !important;
         margin-bottom: 6px !important;
     }
 }
 
-/* Tablet responsive adjustments */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.number-widget-box .widget-content {
-        font-size: 64px !important;
+/* ===== FALLBACK FONT ICONS IF EMOJIS FAIL ===== */
+
+/* If emojis don't work, use FontAwesome as fallback */
+@supports not (font-family: "Apple Color Emoji") {
+    body[data-route="Workspaces/TukTuk Maintenance"] .ce-block:nth-child(7) .widget.shortcut-widget-box::before,
+    .workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(7) .widget.shortcut-widget-box::before {
+        content: '🔧' !important; /* Keep emoji, browsers should support */
     }
     
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box::before {
-        font-size: 26px !important;
-    }
-}
-
-/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
-
-/* Focus states for keyboard navigation */
-.workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box:focus {
-    outline: 2px solid #007bff !important;
-    outline-offset: 2px !important;
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.number-widget-box,
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box {
-        border: 2px solid #000 !important;
-    }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.number-widget-box,
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box {
-        transition: none !important;
+    body[data-route="Workspaces/TukTuk Maintenance"] .ce-block:nth-child(8) .widget.shortcut-widget-box::before,
+    .workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(8) .widget.shortcut-widget-box::before {
+        content: '🔋' !important;
     }
     
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.number-widget-box:hover,
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box:hover {
-        transform: none !important;
-    }
-}
-
-/* ===== PRINT STYLES ===== */
-
-@media print {
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box::before {
-        display: none !important;
+    body[data-route="Workspaces/TukTuk Maintenance"] .ce-block:nth-child(9) .widget.shortcut-widget-box::before,
+    .workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(9) .widget.shortcut-widget-box::before {
+        content: '📦' !important;
     }
     
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.number-widget-box,
-    .workspace-body[data-workspace="TukTuk Maintenance"] .widget.shortcut-widget-box {
-        box-shadow: none !important;
-        border: 1px solid #ccc !important;
+    body[data-route="Workspaces/TukTuk Maintenance"] .ce-block:nth-child(10) .widget.shortcut-widget-box::before,
+    .workspace-body[data-workspace="TukTuk Maintenance"] .ce-block:nth-child(10) .widget.shortcut-widget-box::before {
+        content: '⚠️' !important;
     }
 }
-
-/* ===== ALTERNATIVE ICON OPTIONS (COMMENTED OUT) ===== */
-
-/*
-Alternative icons you can use by uncommenting and changing the content values:
-
-MAINTENANCE RECORDS alternatives:
-🔧 - Wrench (current)
-🛠️ - Hammer and wrench
-⚙️ - Gear
-🔨 - Hammer
-🧰 - Toolbox
-
-BATTERY HEALTH alternatives:
-🔋 - Battery (current)
-⚡ - Lightning bolt
-🔌 - Electric plug
-💡 - Light bulb
-⭐ - Star
-
-PARTS INVENTORY alternatives:
-📦 - Package (current)
-🏪 - Store/warehouse
-📋 - Clipboard
-📊 - Chart
-🗂️ - File organizer
-📁 - Folder
-
-MAINTENANCE ALERTS alternatives:
-⚠️ - Warning triangle (current)
-🚨 - Rotating light
-🔔 - Bell
-🚩 - Flag
-❗ - Exclamation mark
-💡 - Light bulb
-*/
 
 /* ===== END OF MAINTENANCE WORKSPACE CSS ===== */
