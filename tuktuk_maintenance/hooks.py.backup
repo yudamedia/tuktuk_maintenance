@@ -8,6 +8,7 @@ app_version = "0.1.0"
 
 # App styling
 app_include_css = [
+    "/assets/tuktuk_maintenance/css/maintenance.css",
     "/assets/tuktuk_maintenance/css/maintenance_workspace.css"
 ]
 
@@ -129,17 +130,6 @@ custom_fields = {
 
 # Fixtures for workspace and charts
 fixtures = [
-    {
-        "doctype": "Number Card",
-        "filters": [
-            ["name", "in", [
-                "Total Maintenance Records",
-                "Active Maintenance", 
-                "Critical Alerts",
-                "Low Battery Health"
-            ]]
-        ]
-    },
     {
         "doctype": "Workspace",
         "filters": [

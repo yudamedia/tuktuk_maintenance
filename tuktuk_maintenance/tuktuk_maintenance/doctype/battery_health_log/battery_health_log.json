@@ -1,0 +1,256 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-01-03 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "basic_info",
+  "tuktuk_vehicle",
+  "reading_date",
+  "reading_type",
+  "column_break_1",
+  "technician",
+  "maintenance_record",
+  "battery_metrics",
+  "battery_percentage",
+  "voltage_reading",
+  "current_reading",
+  "column_break_2",
+  "temperature",
+  "charging_cycles",
+  "health_percentage",
+  "performance_section",
+  "capacity_ah",
+  "original_capacity_ah",
+  "capacity_retention",
+  "column_break_3",
+  "charging_efficiency",
+  "discharge_rate",
+  "estimated_range_km",
+  "analysis_section",
+  "health_status",
+  "degradation_rate",
+  "predicted_eol_date",
+  "recommendations",
+  "notes"
+ ],
+ "fields": [
+  {
+   "default": "BATT-.YYYY.-.MM.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "BATT-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "basic_info",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "tuktuk_vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "TukTuk Vehicle",
+   "options": "TukTuk Vehicle",
+   "reqd": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "reading_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Reading Date & Time",
+   "reqd": 1
+  },
+  {
+   "default": "Automatic",
+   "fieldname": "reading_type",
+   "fieldtype": "Select",
+   "label": "Reading Type",
+   "options": "Automatic\nManual\nMaintenance\nInspection",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "technician",
+   "fieldtype": "Link",
+   "label": "Technician",
+   "options": "User"
+  },
+  {
+   "fieldname": "maintenance_record",
+   "fieldtype": "Link",
+   "label": "Related Maintenance",
+   "options": "TukTuk Maintenance Record"
+  },
+  {
+   "fieldname": "battery_metrics",
+   "fieldtype": "Section Break",
+   "label": "Battery Metrics"
+  },
+  {
+   "fieldname": "battery_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Battery Level (%)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "voltage_reading",
+   "fieldtype": "Float",
+   "label": "Voltage (V)",
+   "precision": 3
+  },
+  {
+   "fieldname": "current_reading",
+   "fieldtype": "Float",
+   "label": "Current (A)",
+   "precision": 2
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Float",
+   "label": "Temperature (°C)",
+   "precision": 1
+  },
+  {
+   "fieldname": "charging_cycles",
+   "fieldtype": "Int",
+   "label": "Total Charging Cycles"
+  },
+  {
+   "fieldname": "health_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Battery Health (%)"
+  },
+  {
+   "fieldname": "performance_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Metrics"
+  },
+  {
+   "fieldname": "capacity_ah",
+   "fieldtype": "Float",
+   "label": "Current Capacity (Ah)",
+   "precision": 2
+  },
+  {
+   "fieldname": "original_capacity_ah",
+   "fieldtype": "Float",
+   "label": "Original Capacity (Ah)",
+   "precision": 2
+  },
+  {
+   "fieldname": "capacity_retention",
+   "fieldtype": "Percent",
+   "label": "Capacity Retention (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "charging_efficiency",
+   "fieldtype": "Percent",
+   "label": "Charging Efficiency (%)"
+  },
+  {
+   "fieldname": "discharge_rate",
+   "fieldtype": "Float",
+   "label": "Discharge Rate (A/h)",
+   "precision": 3
+  },
+  {
+   "fieldname": "estimated_range_km",
+   "fieldtype": "Float",
+   "label": "Estimated Range (km)",
+   "precision": 1
+  },
+  {
+   "fieldname": "analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Analysis & Recommendations"
+  },
+  {
+   "fieldname": "health_status",
+   "fieldtype": "Select",
+   "label": "Health Status",
+   "options": "Excellent\nGood\nFair\nPoor\nCritical\nReplace Soon",
+   "reqd": 1
+  },
+  {
+   "fieldname": "degradation_rate",
+   "fieldtype": "Float",
+   "label": "Degradation Rate (%/month)",
+   "precision": 3,
+   "read_only": 1
+  },
+  {
+   "fieldname": "predicted_eol_date",
+   "fieldtype": "Date",
+   "label": "Predicted End of Life",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Text",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-03 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "TukTuk Maintenance",
+ "name": "Battery Health Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tuktuk Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Supervisor",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance Technician",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

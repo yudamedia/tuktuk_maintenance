@@ -1,0 +1,62 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2025-01-03 12:00:00.000000",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "tuktuk_vehicle",
+   "fieldtype": "Link",
+   "label": "TukTuk Vehicle",
+   "mandatory": 0,
+   "options": "TukTuk Vehicle",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "health_status",
+   "fieldtype": "Select",
+   "label": "Health Status",
+   "mandatory": 0,
+   "options": "Excellent\nGood\nFair\nPoor\nCritical\nReplace Soon",
+   "wildcard_filter": 0
+  }
+ ],
+ "is_standard": "Yes",
+ "modified": "2025-01-03 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "TukTuk Maintenance",
+ "name": "Battery Health Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Battery Health Log",
+ "report_name": "Battery Health Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Tuktuk Manager"
+  },
+  {
+   "role": "Fleet Supervisor"
+  },
+  {
+   "role": "System Manager"
+  }
+ ]
+}

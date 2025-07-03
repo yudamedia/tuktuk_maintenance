@@ -1,0 +1,317 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-01-03 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "maintenance_details",
+  "tuktuk_vehicle",
+  "maintenance_type",
+  "priority",
+  "column_break_1",
+  "status",
+  "assigned_to",
+  "maintenance_schedule",
+  "scheduling_section",
+  "scheduled_date",
+  "started_datetime",
+  "column_break_2",
+  "completed_datetime",
+  "duration_hours",
+  "work_section",
+  "issue_description",
+  "work_performed",
+  "parts_section",
+  "parts_used",
+  "cost_section",
+  "labor_hours",
+  "labor_rate",
+  "column_break_3",
+  "parts_cost",
+  "labor_cost",
+  "total_cost",
+  "battery_section",
+  "battery_health_before",
+  "battery_health_after",
+  "column_break_4",
+  "charging_cycles_before",
+  "voltage_reading",
+  "follow_up_section",
+  "next_maintenance_date",
+  "recommendations",
+  "attachments_section",
+  "before_photos",
+  "after_photos"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MAINT-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "maintenance_details",
+   "fieldtype": "Section Break",
+   "label": "Maintenance Details"
+  },
+  {
+   "fieldname": "tuktuk_vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "TukTuk Vehicle",
+   "options": "TukTuk Vehicle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Maintenance Type",
+   "options": "Scheduled\nEmergency\nRepair\nBattery Service\nSolar Panel\nTire Service\nBrake Service\nGeneral Inspection",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nIn Progress\nCompleted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned Technician",
+   "options": "User"
+  },
+  {
+   "fieldname": "maintenance_schedule",
+   "fieldtype": "Link",
+   "label": "Maintenance Schedule",
+   "options": "Maintenance Schedule",
+   "read_only": 1
+  },
+  {
+   "fieldname": "scheduling_section",
+   "fieldtype": "Section Break",
+   "label": "Scheduling"
+  },
+  {
+   "fieldname": "scheduled_date",
+   "fieldtype": "Datetime",
+   "label": "Scheduled Date & Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "started_datetime",
+   "fieldtype": "Datetime",
+   "label": "Started Date & Time"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "completed_datetime",
+   "fieldtype": "Datetime",
+   "label": "Completed Date & Time"
+  },
+  {
+   "fieldname": "duration_hours",
+   "fieldtype": "Float",
+   "label": "Duration (Hours)",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "work_section",
+   "fieldtype": "Section Break",
+   "label": "Work Details"
+  },
+  {
+   "fieldname": "issue_description",
+   "fieldtype": "Text",
+   "label": "Issue Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "work_performed",
+   "fieldtype": "Text Editor",
+   "label": "Work Performed"
+  },
+  {
+   "fieldname": "parts_section",
+   "fieldtype": "Section Break",
+   "label": "Parts & Materials"
+  },
+  {
+   "description": "List of parts and materials used",
+   "fieldname": "parts_used",
+   "fieldtype": "Table",
+   "label": "Parts Used",
+   "options": "Maintenance Parts Used"
+  },
+  {
+   "fieldname": "cost_section",
+   "fieldtype": "Section Break",
+   "label": "Cost Information"
+  },
+  {
+   "fieldname": "labor_hours",
+   "fieldtype": "Float",
+   "label": "Labor Hours",
+   "precision": 2
+  },
+  {
+   "default": "500",
+   "fieldname": "labor_rate",
+   "fieldtype": "Currency",
+   "label": "Labor Rate per Hour"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parts_cost",
+   "fieldtype": "Currency",
+   "label": "Total Parts Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "labor_cost",
+   "fieldtype": "Currency",
+   "label": "Total Labor Cost",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.maintenance_type == 'Battery Service'",
+   "fieldname": "battery_section",
+   "fieldtype": "Section Break",
+   "label": "Battery Information"
+  },
+  {
+   "fieldname": "battery_health_before",
+   "fieldtype": "Percent",
+   "label": "Battery Health Before (%)"
+  },
+  {
+   "fieldname": "battery_health_after",
+   "fieldtype": "Percent",
+   "label": "Battery Health After (%)"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "charging_cycles_before",
+   "fieldtype": "Int",
+   "label": "Charging Cycles Before"
+  },
+  {
+   "fieldname": "voltage_reading",
+   "fieldtype": "Float",
+   "label": "Voltage Reading (V)",
+   "precision": 2
+  },
+  {
+   "fieldname": "follow_up_section",
+   "fieldtype": "Section Break",
+   "label": "Follow-up"
+  },
+  {
+   "fieldname": "next_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Next Maintenance Due"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Text",
+   "label": "Recommendations & Notes"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "before_photos",
+   "fieldtype": "Attach Image",
+   "label": "Before Photos"
+  },
+  {
+   "fieldname": "after_photos",
+   "fieldtype": "Attach Image",
+   "label": "After Photos"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-03 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "TukTuk Maintenance",
+ "name": "TukTuk Maintenance Record",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tuktuk Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Supervisor",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "if_owner": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance Technician",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "maintenance_type",
+ "track_changes": 1
+}

@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:part_name",
+ "creation": "2025-01-03 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "part_details",
+  "part_name",
+  "part_code",
+  "category",
+  "column_break_1",
+  "supplier",
+  "unit_of_measure",
+  "inventory_section",
+  "current_stock",
+  "minimum_stock",
+  "maximum_stock",
+  "column_break_2",
+  "unit_cost",
+  "total_value",
+  "details_section",
+  "description",
+  "specifications",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "part_details",
+   "fieldtype": "Section Break",
+   "label": "Part Details"
+  },
+  {
+   "fieldname": "part_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Part Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "part_code",
+   "fieldtype": "Data",
+   "label": "Part Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Battery\nSolar Panel\nTires\nBrakes\nElectrical\nBody\nAccessories\nTools\nConsumables",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Data",
+   "label": "Supplier"
+  },
+  {
+   "default": "Nos",
+   "fieldname": "unit_of_measure",
+   "fieldtype": "Link",
+   "label": "Unit of Measure",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "inventory_section",
+   "fieldtype": "Section Break",
+   "label": "Inventory"
+  },
+  {
+   "default": "0",
+   "fieldname": "current_stock",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Current Stock",
+   "precision": 2
+  },
+  {
+   "default": "1",
+   "fieldname": "minimum_stock",
+   "fieldtype": "Float",
+   "label": "Minimum Stock Level",
+   "precision": 2
+  },
+  {
+   "fieldname": "maximum_stock",
+   "fieldtype": "Float",
+   "label": "Maximum Stock Level",
+   "precision": 2
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_cost",
+   "fieldtype": "Currency",
+   "label": "Unit Cost",
+   "precision": 2
+  },
+  {
+   "fieldname": "total_value",
+   "fieldtype": "Currency",
+   "label": "Total Stock Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "specifications",
+   "fieldtype": "Text",
+   "label": "Technical Specifications"
+  },
+  {
+   "default": 1,
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-03 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "TukTuk Maintenance",
+ "name": "Maintenance Parts Inventory",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tuktuk Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Supervisor",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance Technician",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

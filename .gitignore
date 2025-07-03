@@ -1,7 +1,23 @@
-.DS_Store
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ERPNext specific
 *.pyc
-*.egg-info
+*.pyo
+.DS_Store
+.vscode/
 *.swp
-tags
-node_modules
-__pycache__
+*.swo
+*~
+
+# Logs
+*.log
+
+# IDE files
+.idea/
+*.sublime-*
+
+# Node modules
+node_modules/

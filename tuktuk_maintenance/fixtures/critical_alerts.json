@@ -1,0 +1,22 @@
+{
+  "is_standard": 0,
+  "module": null,
+  "label": "Critical Alerts",
+  "type": "Document Type",
+  "report_name": null,
+  "method": null,
+  "function": "Count",
+  "aggregate_function_based_on": null,
+  "document_type": "Maintenance Alert",
+  "parent_document_type": null,
+  "report_field": null,
+  "report_function": "Sum",
+  "is_public": 1,
+  "filters_config": null,
+  "show_percentage_stats": 1,
+  "stats_time_interval": "Daily",
+  "filters_json": "[[\"Maintenance Alert\",\"priority\",\"=\",\"Critical\",false],[\"Maintenance Alert\",\"status\",\"in\",[\"Open\",\"Acknowledged\"],false]]",
+  "dynamic_filters_json": null,
+  "color": null,
+  "doctype": "Number Card"
+}
