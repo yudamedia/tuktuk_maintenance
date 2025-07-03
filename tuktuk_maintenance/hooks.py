@@ -16,10 +16,7 @@ app_include_js = [
 ]
 
 # Website includes for proper loading
-website_context = {
-    "favicon": "/assets/tuktuk_maintenance/images/favicon.ico",
-    "splash_image": "/assets/tuktuk_maintenance/images/splash.png"
-}
+
 
 app_icon = "fa fa-wrench"
 app_color = "orange"
