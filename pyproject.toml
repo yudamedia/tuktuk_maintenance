@@ -12,9 +12,9 @@ license = {file = "LICENSE"}
 authors = [
     {name = "Yuda Media", email = "yuda@graphicshop.co.ke"},
 ]
-dependencies = [
-    "tuktuk_management>=0.1.4"
-]
+dependencies = []
+optional-dependencies = { dev = ["../tuktuk_management"] }
+
 
 [project.urls]
 Homepage = "https://github.com/yudamedia/tuktuk-maintenance"
