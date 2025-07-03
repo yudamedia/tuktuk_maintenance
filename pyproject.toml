@@ -13,7 +13,7 @@ authors = [
     {name = "Yuda Media", email = "yuda@graphicshop.co.ke"},
 ]
 dependencies = []
-optional-dependencies = { dev = ["../tuktuk_management"] }
+# optional-dependencies = { dev = ["../tuktuk_management"] }
 
 
 [project.urls]
