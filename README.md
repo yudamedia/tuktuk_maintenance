@@ -1,7 +1,16 @@
-## Tuktuk Maintenance
+# TukTuk Management System
 
-Maintenance Management Addon for Sunny TukTuk Fleet
+## Related Apps
+This app works with the TukTuk Maintenance System:
+- Repository: https://github.com/yudamedia/tuktuk-maintenance
+- Integration: API calls between systems for maintenance scheduling
 
-#### License
+## Installation
+```bash
+# Install both apps
+bench get-app https://github.com/yudamedia/tuktuk-management.git
+bench get-app https://github.com/yudamedia/tuktuk-maintenance.git
 
-mit
+# Install on site
+bench --site yoursite install-app tuktuk_management
+bench --site yoursite install-app tuktuk_maintenance
