@@ -1,254 +1,72 @@
 {
  "charts": [],
- "content": "[{\"id\":\"header_title\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">TukTuk Maintenance Dashboard</span>\",\"col\":12}},{\"id\":\"_2M0EP2sfb\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Maintenance Records\",\"col\":3}},{\"id\":\"hXhM_DwW2F\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Maintenance\",\"col\":3}},{\"id\":\"32xM_R8vPw\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Critical Alerts\",\"col\":3}},{\"id\":\"44xM_R8vPw\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Low Battery Health\",\"col\":3}},{\"id\":\"spacer_1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"button_row_1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Maintenance Records\",\"col\":3}},{\"id\":\"button_row_2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Battery Health\",\"col\":3}},{\"id\":\"button_row_3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Parts Inventory\",\"col\":3}},{\"id\":\"button_row_4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Maintenance Alerts\",\"col\":3}},{\"id\":\"spacer_2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"quick_lists_1\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Overdue Maintenance\",\"col\":4}},{\"id\":\"quick_lists_2\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Low Stock Parts\",\"col\":4}},{\"id\":\"quick_lists_3\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Recent Battery Readings\",\"col\":4}}]",
- "creation": "2025-01-03 12:00:00.000000",
+ "content": "[{\"id\":\"header\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\ud83d\udd27 TukTuk Maintenance</span>\",\"col\":12}},{\"id\":\"0gOglCgm6B\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Maintenance Records\",\"col\":4}},{\"id\":\"a3Lv2_v5f-\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active\",\"col\":4}},{\"id\":\"Iy2WyMzqwm\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Alerts\",\"col\":4}},{\"id\":\"vbV6UwfWOY\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"f9BGf-ZwZB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Maintenance Records\",\"col\":3}},{\"id\":\"bZGyysuPj_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Battery Health\",\"col\":3}},{\"id\":\"8BK1GaACGu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Parts Inventory\",\"col\":3}},{\"id\":\"s4uKB74pOW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Maintenance Alerts\",\"col\":3}}]",
+ "creation": "2025-07-03 18:30:21.392500",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
- "for_user": "",
  "hide_custom": 0,
- "icon": "🔧",
+ "icon": "\ud83d\udd27",
  "idx": 0,
- "indicator_color": "",
+ "indicator_color": "green",
  "is_hidden": 0,
  "label": "TukTuk Maintenance",
- "links": [
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Maintenance Operations",
-   "link_count": 0,
-   "link_to": "",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Card Break"
-  },
-  {
-   "dependencies": "",
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "TukTuk Maintenance Record",
-   "link_count": 0,
-   "link_to": "TukTuk Maintenance Record",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "DocType"
-  },
-  {
-   "dependencies": "",
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Maintenance Schedule",
-   "link_count": 0,
-   "link_to": "Maintenance Schedule",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "DocType"
-  },
-  {
-   "dependencies": "",
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Battery Health Log",
-   "link_count": 0,
-   "link_to": "Battery Health Log",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "DocType"
-  },
-  {
-   "dependencies": "",
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Maintenance Alert",
-   "link_count": 0,
-   "link_to": "Maintenance Alert",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Inventory Management",
-   "link_count": 0,
-   "link_to": "",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Card Break"
-  },
-  {
-   "dependencies": "",
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Maintenance Parts Inventory",
-   "link_count": 0,
-   "link_to": "Maintenance Parts Inventory",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Reports & Analytics",
-   "link_count": 0,
-   "link_to": "",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Card Break"
-  },
-  {
-   "dependencies": "",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Maintenance Cost Analysis",
-   "link_count": 0,
-   "link_to": "Maintenance Cost Analysis",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Report"
-  },
-  {
-   "dependencies": "",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Battery Health Report",
-   "link_count": 0,
-   "link_to": "Battery Health Report",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Report"
-  }
- ],
- "modified": "2025-01-03 12:00:00.000000",
+ "links": [],
+ "modified": "2025-07-03 18:50:06.839645",
  "modified_by": "Administrator",
- "module": "TukTuk Maintenance",
+ "module": "Tuktuk Maintenance",
  "name": "TukTuk Maintenance",
  "number_cards": [
   {
-   "aggregate_function_based_on": "",
-   "document_type": "TukTuk Maintenance Record",
-   "dynamic_filters_json": "[]",
-   "filters_json": "[]",
-   "function": "Count",
-   "is_public": 1,
-   "label": "Total Maintenance Records",
-   "number_card_name": "Total Maintenance Records",
-   "parent_document_type": "",
-   "stats_time_interval": "Daily"
+   "label": "Maintenance Records",
+   "number_card_name": "Total Maintenance Records"
   },
   {
-   "aggregate_function_based_on": "",
-   "document_type": "TukTuk Maintenance Record",
-   "dynamic_filters_json": "[]",
-   "filters_json": "[[\"TukTuk Maintenance Record\",\"status\",\"in\",[\"Open\",\"In Progress\"],false]]",
-   "function": "Count",
-   "is_public": 1,
-   "label": "Active Maintenance",
-   "number_card_name": "Active Maintenance",
-   "parent_document_type": "",
-   "stats_time_interval": "Daily"
+   "label": "Active",
+   "number_card_name": "Active Maintenance"
   },
   {
-   "aggregate_function_based_on": "",
-   "document_type": "Maintenance Alert",
-   "dynamic_filters_json": "[]",
-   "filters_json": "[[\"Maintenance Alert\",\"priority\",\"=\",\"Critical\",false],[\"Maintenance Alert\",\"status\",\"in\",[\"Open\",\"Acknowledged\"],false]]",
-   "function": "Count",
-   "is_public": 1,
-   "label": "Critical Alerts",
-   "number_card_name": "Critical Alerts",
-   "parent_document_type": "",
-   "stats_time_interval": "Daily"
-  },
-  {
-   "aggregate_function_based_on": "",
-   "document_type": "Battery Health Log",
-   "dynamic_filters_json": "[]",
-   "filters_json": "[[\"Battery Health Log\",\"health_status\",\"in\",[\"Poor\",\"Critical\"],false]]",
-   "function": "Count",
-   "is_public": 1,
-   "label": "Low Battery Health",
-   "number_card_name": "Low Battery Health",
-   "parent_document_type": "",
-   "stats_time_interval": "Daily"
+   "label": "Alerts",
+   "number_card_name": "Critical Alerts"
   }
  ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
- "quick_lists": [
-  {
-   "document_type": "TukTuk Maintenance Record",
-   "label": "Overdue Maintenance",
-   "quick_list_filter": "[[\"status\",\"=\",\"Open\"],[\"scheduled_date\",\"<\",\"2025-07-03\"]]",
-   "quick_list_name": "Overdue Maintenance"
-  },
-  {
-   "document_type": "Maintenance Parts Inventory",
-   "label": "Low Stock Parts",
-   "quick_list_filter": "[[\"current_stock\",\"<=\",\"minimum_stock\"]]",
-   "quick_list_name": "Low Stock Parts"
-  },
-  {
-   "document_type": "Battery Health Log",
-   "label": "Recent Battery Readings",
-   "quick_list_filter": "[]",
-   "quick_list_name": "Recent Battery Readings"
-  }
- ],
- "roles": [
-  {
-   "role": "Tuktuk Manager"
-  }
- ],
+ "quick_lists": [],
+ "roles": [],
  "sequence_id": 2.0,
  "shortcuts": [
   {
-   "color": "orange",
+   "color": "Green",
    "doc_view": "List",
-   "format": "{} Active",
-   "label": "Maintenance Records",
-   "link_to": "TukTuk Maintenance Record",
-   "stats_filter": "[[\"TukTuk Maintenance Record\",\"status\",\"in\",[\"Open\",\"In Progress\"],false]]",
-   "type": "DocType"
-  },
-  {
-   "color": "green",
-   "doc_view": "List",
-   "format": "{} Records",
    "label": "Battery Health",
    "link_to": "Battery Health Log",
    "stats_filter": "[]",
    "type": "DocType"
   },
   {
-   "color": "blue",
+   "color": "Orange",
    "doc_view": "List",
-   "format": "{} Items",
+   "label": "Maintenance Records",
+   "link_to": "TukTuk Maintenance Record",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
    "label": "Parts Inventory",
    "link_to": "Maintenance Parts Inventory",
    "stats_filter": "[]",
    "type": "DocType"
   },
   {
-   "color": "red",
+   "color": "Red",
    "doc_view": "List",
-   "format": "{} Critical",
    "label": "Maintenance Alerts",
    "link_to": "Maintenance Alert",
-   "stats_filter": "[[\"Maintenance Alert\",\"priority\",\"=\",\"Critical\",false]]",
+   "stats_filter": "[]",
    "type": "DocType"
   }
  ],
