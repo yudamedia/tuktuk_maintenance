@@ -65,8 +65,9 @@ def create_maintenance_number_cards():
         except Exception as e:
             print(f"❌ Error creating Number Card {card_data['number_card_name']}: {str(e)}")
     
-    frappe.db.commit()
-    print(f"\n🎉 Created {created_cards} Number Cards successfully!")
+    if created_cards > 0:
+        frappe.db.commit()
+        print(f"\n🎉 Created {created_cards} Number Cards successfully!")
     
     return created_cards
 

@@ -69,7 +69,7 @@ doc_events = {
     }
 }
 
-# Custom permissions - FIXED REFERENCES
+# Custom permissions
 permission_query_conditions = {
     "TukTuk Maintenance Record": "tuktuk_maintenance.api.permissions.maintenance_query_conditions",
     "Battery Health Log": "tuktuk_maintenance.api.permissions.battery_health_query_conditions", 
