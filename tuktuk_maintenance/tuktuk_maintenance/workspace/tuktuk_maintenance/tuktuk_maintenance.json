@@ -208,7 +208,11 @@
    "quick_list_name": "Recent Battery Readings"
   }
  ],
- "roles": [],
+ "roles": [
+  {
+   "role": "Tuktuk Manager"
+  }
+ ],
  "sequence_id": 2.0,
  "shortcuts": [
   {
