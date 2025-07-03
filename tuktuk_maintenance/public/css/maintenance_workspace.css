@@ -24,7 +24,7 @@ body[data-route="Workspaces/TukTuk Maintenance"] .widget.number-widget-box,
     box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
     transition: all 0.3s ease !important;
     text-align: center !important;
-    min-height: 140px !important;
+    min-height: 84px !important;
 }
 
 /* ===== SHORTCUT BUTTONS BASE STYLING (OVERRIDE TUKTUK MANAGEMENT) ===== */
@@ -252,3 +252,9 @@ body[data-route="Workspaces/TukTuk Maintenance"] .widget.shortcut-widget-box {
 }
 
 /* ===== END OF MAINTENANCE WORKSPACE CSS ===== */
+
+/* Hide the workspace edit button */
+.btn-edit-workspace {
+    display: none !important;
+}
+
