@@ -81,7 +81,7 @@ def calculate_battery_health_estimate(vehicle):
     try:
         # Get historical battery data
         historical_data = frappe.db.sql("""
-            SELECT battery_level, voltage_reading, reading_date
+            SELECT battery_percentage, voltage_reading, reading_date
             FROM `tabBattery Health Log`
             WHERE tuktuk_vehicle = %s
             AND reading_date >= %s
