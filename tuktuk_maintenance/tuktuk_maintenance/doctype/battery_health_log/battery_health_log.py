@@ -12,8 +12,9 @@ class BatteryHealthLog(Document):
 		self.calculate_degradation_rate()
 	
 	def calculate_capacity_retention(self):
-		if self.current_capacity_ah and self.original_capacity_ah:
-			self.capacity_retention = (flt(self.current_capacity_ah) / flt(self.original_capacity_ah)) * 100
+		# Fixed: Use correct field names from JSON definition
+		if self.capacity_ah and self.original_capacity_ah:
+			self.capacity_retention = (flt(self.capacity_ah) / flt(self.original_capacity_ah)) * 100
 	
 	def determine_health_status(self):
 		if self.health_percentage:

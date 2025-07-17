@@ -116,8 +116,9 @@ def update_battery_health(tuktuk_vehicle, health_data):
         health_log.health_percentage = health_data.get("health_percentage")
         
         # Calculate capacity retention if data available
+        # Fixed: Use correct field names from JSON definition
         if health_data.get("current_capacity") and health_data.get("original_capacity"):
-            health_log.capacity_ah = health_data.get("current_capacity")
+            health_log.capacity_ah = health_data.get("current_capacity")  # Fixed field name
             health_log.original_capacity_ah = health_data.get("original_capacity")
             health_log.capacity_retention = (health_data.get("current_capacity") / health_data.get("original_capacity")) * 100
         
@@ -162,7 +163,7 @@ def update_battery_health(tuktuk_vehicle, health_data):
     except Exception as e:
         frappe.log_error(f"Error updating battery health: {str(e)}")
         return {"success": False, "error": str(e)}
-
+        
 @frappe.whitelist()
 def get_maintenance_dashboard():
     """Get maintenance dashboard data"""
