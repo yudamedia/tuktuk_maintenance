@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:part_name",
- "creation": "2025-01-03 12:00:00.000000",
+ "creation": "2025-01-03 12:00:00",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -51,7 +51,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Category",
-   "options": "Battery\nSolar Panel\nTires\nBrakes\nElectrical\nBody\nAccessories\nTools\nConsumables",
+   "options": "Electrical & Lighting\nBraking System\nSteering & Controls\nWheels & Tires\nBody & Frame\nTools & Accessories\nConsumables\nSuspension & Bearings\nDrive & Transmission\nWiper System\nBattery & Solar",
    "reqd": 1
   },
   {
@@ -81,20 +81,20 @@
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Current Stock",
-   "precision": 2
+   "precision": "2"
   },
   {
    "default": "1",
    "fieldname": "minimum_stock",
    "fieldtype": "Float",
    "label": "Minimum Stock Level",
-   "precision": 2
+   "precision": "2"
   },
   {
    "fieldname": "maximum_stock",
    "fieldtype": "Float",
    "label": "Maximum Stock Level",
-   "precision": 2
+   "precision": "2"
   },
   {
    "fieldname": "column_break_2",
@@ -104,7 +104,7 @@
    "fieldname": "unit_cost",
    "fieldtype": "Currency",
    "label": "Unit Cost",
-   "precision": 2
+   "precision": "2"
   },
   {
    "fieldname": "total_value",
@@ -128,7 +128,7 @@
    "label": "Technical Specifications"
   },
   {
-   "default": 1,
+   "default": "1",
    "fieldname": "is_active",
    "fieldtype": "Check",
    "label": "Is Active"
@@ -136,9 +136,9 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-03 12:00:00.000000",
+ "modified": "2025-07-18 19:14:59.626572",
  "modified_by": "Administrator",
- "module": "TukTuk Maintenance",
+ "module": "Tuktuk Maintenance",
  "name": "Maintenance Parts Inventory",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
